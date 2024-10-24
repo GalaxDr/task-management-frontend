@@ -1,20 +1,7 @@
-# Use uma versão mais recente do Debian como base
-FROM node:12-bullseye-slim
+# Use a imagem oficial do Node.js 14 como base
+FROM node:14
 
-# Adicionar o repositório de backports para Python 3.10
-RUN apt-get update && apt-get install -y software-properties-common \
-    && add-apt-repository -y 'deb http://deb.debian.org/debian bullseye-backports main' \
-    && apt-get update
-
-# Instalar o Python 3.10 e suas dependências
-RUN apt-get install -y \
-    python3.10 \
-    python3.10-venv \
-    python3.10-dev \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Definir o diretório de trabalho
+# Defina o diretório de trabalho
 WORKDIR /app
 
 # Copiar o arquivo package.json e yarn.lock para o diretório de trabalho
