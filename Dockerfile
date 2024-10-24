@@ -1,5 +1,5 @@
 # Use a imagem oficial do Node.js 12 como base
-FROM node:12
+FROM node:12-bullseye-slim
 
 # Instalar Python 3.10
 RUN apt-get update && apt-get install -y \
