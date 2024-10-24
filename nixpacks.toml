@@ -1,0 +1,11 @@
+[phases.setup]
+nixpkgs = ["python310"]
+
+[phases.build]
+commands = [
+  "export PYTHON=$(which python3.10)",
+  "npm install"
+]
+
+[phases.start]
+commands = ["npm start"]
