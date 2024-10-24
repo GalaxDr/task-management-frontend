@@ -21,7 +21,6 @@
     "typescript": "^3.4.5"
   },
   "scripts": {
-    "preinstall": "npm config set python /usr/bin/python3.10",
     "start": "cross-env PORT=3001 react-app-rewired start",
     "build": "cross-env react-app-rewired build",
     "test": "cross-env react-app-rewired test --env=jsdom",
